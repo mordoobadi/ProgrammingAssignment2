@@ -30,9 +30,9 @@ makeCacheMatrix <- function(x = matrix()) {
 
 ## Solves for inverse of the matrix contained in the
 ## cached matrix x and returns it.
-## If the inverse of this matrix is avaialable it is
-## going to be returned otherwise it will be computed 
-## and then returned.
+## If the inverse of this matrix is available (cached) 
+## it is going to be returned otherwise it will be 
+## computed, cached, and then returned.
 cacheSolve <- function(x, ...) {
   ## Return a matrix that is the inverse of 'x'
   invrs <- x$getinv()
