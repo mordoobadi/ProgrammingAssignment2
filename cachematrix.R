@@ -1,8 +1,16 @@
-## Put comments here that give an overall description of what your
-## functions do
+#### Put comments here that give an overall description of what your
+#### functions do
 
-## Write a short comment describing this function
-
+#### Write a short comment describing this function
+## function makeCacheMatrix creates a cached matrix 
+## A Cached Matrix stores the original matrix and 
+## its inverse. 
+##
+## FUNCTIONS:
+##      $get()    - Returns the original matrix object
+##      $set()    - Assigns a matrix object
+##      $getinv() - Returns the inverse of the matrix
+##      $setinv() - Assigns the inverse of the matrix
 makeCacheMatrix <- function(x = matrix()) {
   inv <- NULL
   set <- function(y) {
@@ -18,8 +26,13 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## Write a short comment describing this function
+#### Write a short comment describing this function
 
+## Solves for inverse of the matrix contained in the
+## cached matrix x and returns it.
+## If the inverse of this matrix is avaialable it is
+## going to be returned otherwise it will be computed 
+## and then returned.
 cacheSolve <- function(x, ...) {
   ## Return a matrix that is the inverse of 'x'
   invrs <- x$getinv()
